@@ -1,0 +1,68 @@
+import type { Props } from '@components/Timer'
+
+// 23min - 1 LB x 2 LB
+export const fullMoonMadness: Props['blocks'] = [
+  {
+    equipment: '2 LB',
+    steps: [
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Boxer Step' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Boxer Step' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
+    ],
+  },
+  {
+    equipment: '1 LB',
+    steps: [
+      { minutes: 1, seconds: 0, label: 'Change Ropes ➡️ 1 LB' },
+      { minutes: 0, seconds: 30, label: 'Cross Feet' },
+      { minutes: 0, seconds: 30, label: 'Swing Kick' },
+      { minutes: 0, seconds: 30, label: 'Cross Feet' },
+      { minutes: 0, seconds: 30, label: 'Swing Kick' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 30, label: 'Lateral Lunges' },
+      { minutes: 0, seconds: 30, label: 'Curtsy Squats' },
+      { minutes: 0, seconds: 30, label: 'Lateral Lunges' },
+      { minutes: 0, seconds: 30, label: 'Curtsy Squats' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 30, label: 'Jump Rope Off Step' },
+      { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
+      { minutes: 0, seconds: 30, label: 'Jump Rope Off Step' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+
+      { minutes: 0, seconds: 30, label: 'Surrenders' },
+      { minutes: 0, seconds: 30, label: 'Squat to Reverse Lunge' },
+      { minutes: 0, seconds: 30, label: 'Surrenders' },
+      { minutes: 0, seconds: 30, label: 'Squat to Reverse Lunge' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 30, label: 'Cross Feet' },
+      { minutes: 0, seconds: 30, label: 'Swing Kick' },
+      { minutes: 0, seconds: 30, label: 'Cross Feet' },
+      { minutes: 0, seconds: 30, label: 'Swing Kick' },
+    ],
+  },
+  {
+    equipment: '2 LB',
+    steps: [
+      { minutes: 1, seconds: 0, label: 'Change Ropes ➡️ 2 LB' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Boxer Step' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Boxer Step' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
+    ],
+  },
+]
