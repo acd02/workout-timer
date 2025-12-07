@@ -1,7 +1,7 @@
-import type { Props } from '@components/Timer'
+import type { Block } from '@components/Timer/types'
 
 // 27min - 1/2 LB x 1/4 LB
-export const intense: Props['blocks'] = [
+export const intense: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [

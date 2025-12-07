@@ -1,7 +1,7 @@
-import type { Props } from '@components/Timer'
+import type { Block } from '@components/Timer/types'
 
 // 28min - 1/2 LB x 1 LB
-export const summerGlowGrinder: Props['blocks'] = [
+export const summerGlowGrinder: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [

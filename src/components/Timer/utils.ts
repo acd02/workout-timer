@@ -1,6 +1,6 @@
-import type { Props } from '.'
+import type { Block } from './types'
 
-export function getTotalDuration(exercises: Props['blocks']) {
+export function getTotalDuration(exercises: Block[]) {
   const totalSeconds = exercises.reduce((acc, block) => {
     const blockSeconds = block.steps.reduce(
       (stepAcc, step) => stepAcc + step.minutes * 60 + step.seconds,

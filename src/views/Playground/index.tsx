@@ -1,23 +1,21 @@
+import { Select } from '@components/Select'
+import { Timer } from '@components/Timer'
+import { buttonGroup } from '@styles/button'
 import { useState } from 'react'
 
-import { Timer } from '@components/Timer'
-import { Select } from '@components/Select'
-import { buttonGroup } from '@styles/button'
-
-import { weeksEndHiit } from './workouts/weeksEndHiit'
-import { justAMinute } from './workouts/justAMinute'
-import { intense } from './workouts/intense'
-import { livelyLeaps } from './workouts/livelyLeaps'
-import { fullMoonMadness } from './workouts/fullMoonMadness'
-import { winningWednesday } from './workouts/winningWednesday'
-import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
-import { goGoCardio } from './workouts/goGoCardio'
-import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
-import { championsCircuit } from './workouts/championsCircuit'
-import { summerGlowGrinder } from './workouts/summerGlowGrinder'
 import { cardioCoreCraze } from './workouts/cardioCoreCraze'
-
+import { championsCircuit } from './workouts/championsCircuit'
+import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
 import { emomDumbbells } from './workouts/emomDumbbells'
+import { fullMoonMadness } from './workouts/fullMoonMadness'
+import { goGoCardio } from './workouts/goGoCardio'
+import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
+import { intense } from './workouts/intense'
+import { justAMinute } from './workouts/justAMinute'
+import { livelyLeaps } from './workouts/livelyLeaps'
+import { summerGlowGrinder } from './workouts/summerGlowGrinder'
+import { weeksEndHiit } from './workouts/weeksEndHiit'
+import { winningWednesday } from './workouts/winningWednesday'
 
 const workoutsLookup = {
   ["Week's End Hiit"]: weeksEndHiit,

@@ -1,7 +1,7 @@
+import { Portal, mergeProps, normalizeProps, useMachine } from '@zag-js/react'
 import * as select from '@zag-js/select'
-import { useMachine, normalizeProps, mergeProps, Portal } from '@zag-js/react'
+import { Check, ChevronsUpDown } from 'lucide-react'
 import { useId } from 'react'
-import { ChevronsUpDown, Check } from 'lucide-react'
 
 interface Props {
   label: string
@@ -17,7 +17,7 @@ export function Select({ label, data, onValueChange: onValueChangeProp }: Props)
     collection: select.collection({ items: data }),
     onValueChange(details) {
       const value = details.value.at(0)
-      value && onValueChangeProp(value)
+      if (value) onValueChangeProp(value)
     },
   })
 

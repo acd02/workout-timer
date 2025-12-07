@@ -1,7 +1,7 @@
-import type { Props } from '@components/Timer'
+import type { Block } from '@components/Timer/types'
 
 // 20min - 1/2 LB
-export const goGoCardio: Props['blocks'] = [
+export const goGoCardio: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
