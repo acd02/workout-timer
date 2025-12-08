@@ -1,6 +1,7 @@
+import { PREFIXED_STEP } from './constants'
 import type { Block } from './types'
 
-export function getTotalDuration(exercises: Block[]) {
+export function getTotalDurationSeconds(exercises: Block[]): number {
   const totalSeconds = exercises.reduce((acc, block) => {
     const blockSeconds = block.steps.reduce(
       (stepAcc, step) => stepAcc + step.minutes * 60 + step.seconds,
@@ -9,12 +10,7 @@ export function getTotalDuration(exercises: Block[]) {
     return acc + blockSeconds
   }, 0)
 
-  const minutes = Math.ceil(totalSeconds / 60)
-
-  return {
-    asString: `${minutes}min`,
-    minutes,
-  }
+  return totalSeconds + PREFIXED_STEP.seconds
 }
 
 export function formatNextDuration({

@@ -13,8 +13,8 @@ export function RemainingTimer() {
     id: useId(),
     countdown: true,
     autoStart: false,
-    ...(snap.totalWorkoutMinutes && {
-      startMs: timer.parse({ minutes: snap.totalWorkoutMinutes }),
+    ...(snap.totalWorkoutSeconds && {
+      startMs: timer.parse({ seconds: snap.totalWorkoutSeconds }),
     }),
   })
 
@@ -41,6 +41,8 @@ export function RemainingTimer() {
     return unsubscribe
   }, [])
 
+  const hasAtLeastOneMinute = Number(api.formattedTime.minutes) >= 1
+
   return (
     <div {...api.getRootProps()}>
       <div className="max-w-[640px] mx-auto relative">
@@ -48,9 +50,15 @@ export function RemainingTimer() {
           className="rounded-md flex p-4 justify-evenly text-6xl tabular-nums"
           {...api.getAreaProps()}
         >
-          <div {...api.getItemProps({ type: 'minutes' })}>
-            ~{api.formattedTime.minutes} <span className="text-sm">min</span>
-          </div>
+          {hasAtLeastOneMinute ? (
+            <div {...api.getItemProps({ type: 'minutes' })}>
+              ~{api.formattedTime.minutes} <span className="text-sm">min</span>
+            </div>
+          ) : (
+            <div {...api.getItemProps({ type: 'seconds' })}>
+              ~{api.formattedTime.seconds} <span className="text-sm">sec</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

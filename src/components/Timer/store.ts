@@ -1,7 +1,7 @@
 import { proxy } from 'valtio'
 
 import { Block, FlatStep } from './types'
-import { getTotalDuration } from './utils'
+import { getTotalDurationSeconds } from './utils'
 
 interface State {
   isStoreInitialized: boolean
@@ -12,12 +12,12 @@ interface State {
   nextStep: FlatStep | undefined
   flatStepsLength: number
   allSteps: FlatStep[]
-  totalWorkoutMinutes: number | undefined
+  totalWorkoutSeconds: number | undefined
 }
 
 export const actions = {
   initializeStore: ({ allSteps, blocks }: { allSteps: FlatStep[]; blocks: Block[] }) => {
-    state.totalWorkoutMinutes = getTotalDuration(blocks).minutes
+    state.totalWorkoutSeconds = getTotalDurationSeconds(blocks)
     state.isStoreInitialized = true
     state.allSteps = allSteps
     state.flatStepsLength = allSteps.length - 2
@@ -41,7 +41,6 @@ export const actions = {
     if (!activeStep) return
     state.activeStep = activeStep
 
-    if (!nextStep) return
     state.nextStep = nextStep
   },
   setMainTimerStatus: ({ running, paused }: { running: boolean; paused: boolean }) => {
@@ -66,5 +65,5 @@ export const state = proxy<State>({
   nextStep: undefined,
   flatStepsLength: 0,
   allSteps: [],
-  totalWorkoutMinutes: undefined,
+  totalWorkoutSeconds: undefined,
 })
