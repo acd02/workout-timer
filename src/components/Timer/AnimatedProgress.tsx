@@ -37,7 +37,7 @@ export function AnimatedProgress({ progress }: Props) {
 
   return (
     <svg
-      className="absolute inset-0 pointer-events-none"
+      className="pointer-events-none absolute inset-0"
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio="none"
       style={{ width: '100%', height: '100%' }}

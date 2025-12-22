@@ -32,6 +32,7 @@
     "globals": "^15.13.0",
     "lucide-react": "0.471.1",
     "pipe-ts": "0.0.9",
+    "prettier-plugin-tailwindcss": "0.7.2",
     "tailwindcss": "4.1.4",
     "type-fest": "4.40.0",
     "typescript-eslint": "^8.16.0",

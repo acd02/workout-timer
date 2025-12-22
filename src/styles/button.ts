@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority'
 
 export const buttonGroup = cva(
-  'cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed',
+  'cursor-pointer disabled:cursor-not-allowed disabled:opacity-75',
   {
     variants: {
       isActive: {

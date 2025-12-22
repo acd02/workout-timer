@@ -75,7 +75,7 @@ function Playground() {
 
       case step === 'workout' && !!selectedWorkout:
         return (
-          <div className="flex flex-col gap-y-10 py-8 px-2">
+          <div className="flex flex-col gap-y-10 px-2 py-8">
             <Timer blocks={workoutsLookup[selectedWorkout]} />
           </div>
         )
@@ -85,7 +85,7 @@ function Playground() {
     }
   }
 
-  return <div className="dark:bg-gray-900 dark:text-white min-h-dvh">{getContent()}</div>
+  return <div className="min-h-dvh dark:bg-gray-900 dark:text-white">{getContent()}</div>
 }
 
 export { Playground }

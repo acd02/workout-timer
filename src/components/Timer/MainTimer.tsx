@@ -57,15 +57,15 @@ export function MainTimer() {
   const isWorkoutDone = !api.running && snap.activeIndex === steps.length
 
   if (isWorkoutDone)
-    return <div className="text-8xl text-center h-1/4 mt-20 animate-bounce">🎉</div>
+    return <div className="mt-20 h-1/4 animate-bounce text-center text-8xl">🎉</div>
 
   return (
     <div {...api.getRootProps()}>
-      <div className="max-w-[640px] mx-auto relative">
+      <div className="relative mx-auto max-w-[640px]">
         <AnimatedProgress progress={progress} />
 
         <div
-          className="rounded-md flex p-4 justify-evenly text-8xl tabular-nums"
+          className="flex justify-evenly rounded-md p-4 text-8xl tabular-nums"
           {...api.getAreaProps()}
         >
           <div {...api.getItemProps({ type: 'minutes' })}>
@@ -78,7 +78,7 @@ export function MainTimer() {
         </div>
       </div>
 
-      <div className="mt-8 mx-auto w-fit">
+      <div className="mx-auto mt-8 w-fit">
         <div className={buttonGroup({ part: 'wrapper' })} {...api.getControlProps()}>
           <button
             className={buttonGroup({ part: 'middle' })}

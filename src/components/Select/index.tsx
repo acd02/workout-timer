@@ -3,6 +3,8 @@ import * as select from '@zag-js/select'
 import { Check, ChevronsUpDown } from 'lucide-react'
 import { useId } from 'react'
 
+import { cxLabel, cxList, cxListItem, cxTrigger } from './styles'
+
 interface Props {
   label: string
   data: { label: string; value: string }[]
@@ -38,17 +40,10 @@ export function Select({ label, data, onValueChange: onValueChangeProp }: Props)
 
       {/* Custom Select */}
       <div {...controlProps}>
-        <label
-          className="block text-xl/8 font-medium text-gray-900 dark:text-white"
-          {...api.getLabelProps()}
-        >
+        <label className={cxLabel} {...api.getLabelProps()}>
           {label}
         </label>
-        <button
-          className="grid min-w-[320px] cursor-default grid-cols-1 rounded-md bg-white py-1.5 pr-2 pl-3 text-left text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-indigo-600 sm:text-sm/6 dark:bg-white/5 dark:text-white dark:outline-white/10 dark:focus-visible:outline-indigo-500"
-          type="button"
-          {...api.getTriggerProps()}
-        >
+        <button className={cxTrigger} type="button" {...api.getTriggerProps()}>
           <span className="col-start-1 row-start-1 truncate pr-6">
             {api.valueAsString || 'Select a workout'}
           </span>
@@ -60,16 +55,9 @@ export function Select({ label, data, onValueChange: onValueChangeProp }: Props)
       </div>
       <Portal>
         <div {...api.getPositionerProps()}>
-          <ul
-            className="mt-1 max-h-60 [width:min(var(--reference-width),var(--available-width))] overflow-auto rounded-md bg-white py-1 text-base shadow-lg outline-1 outline-black/5 sm:text-sm dark:bg-gray-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"
-            {...api.getContentProps()}
-          >
+          <ul className={cxList} {...api.getContentProps()}>
             {data.map(item => (
-              <li
-                className="group flex items-center gap-x-2 relative data-highlighted:bg-green-600 dark:text-white cursor-default py-2 pr-9 pl-3 text-gray-900 select-none hover:bg-green-600 hover:text-white"
-                key={item.value}
-                {...api.getItemProps({ item })}
-              >
+              <li className={cxListItem} key={item.value} {...api.getItemProps({ item })}>
                 <span>{item.label}</span>
                 <span {...api.getItemIndicatorProps({ item })}>
                   <Check size="20" />

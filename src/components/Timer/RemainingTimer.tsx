@@ -45,9 +45,9 @@ export function RemainingTimer() {
 
   return (
     <div {...api.getRootProps()}>
-      <div className="max-w-[640px] mx-auto relative">
+      <div className="relative mx-auto max-w-[640px]">
         <div
-          className="rounded-md flex p-4 justify-evenly text-6xl tabular-nums"
+          className="flex justify-evenly rounded-md p-4 text-6xl tabular-nums"
           {...api.getAreaProps()}
         >
           {hasAtLeastOneMinute ? (

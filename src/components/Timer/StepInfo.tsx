@@ -22,8 +22,8 @@ export function StepInfo() {
   ) : null
 
   return (
-    <div className="grid text-center gap-y-8 mt-4">
-      <p className="text-8xl text-green-500 animate-pulse">{snap.activeStep.label}</p>
+    <div className="mt-4 grid gap-y-8 text-center">
+      <p className="animate-pulse text-8xl text-green-500">{snap.activeStep.label}</p>
       {snap.activeStep.equipment && (
         <p className="text-5xl text-green-400">{snap.activeStep.equipment}</p>
       )}
