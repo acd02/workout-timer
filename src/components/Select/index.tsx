@@ -14,7 +14,7 @@ interface Props {
 export function Select({ label, data, onValueChange: onValueChangeProp }: Props) {
   const service = useMachine(select.machine, {
     loopFocus: true,
-    name: 'country',
+    name: 'workout',
     id: useId(),
     collection: select.collection({ items: data }),
     onValueChange(details) {
