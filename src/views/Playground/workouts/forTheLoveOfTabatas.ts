@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 14min
 export const forTheLoveOfTabatas: Block[] = [
   {
     equipment: '1/4 LB',

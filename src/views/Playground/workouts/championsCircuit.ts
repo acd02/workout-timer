@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 26min - 1/2 LB x 1 LB
 export const championsCircuit: Block[] = [
   {
     equipment: '1 LB',

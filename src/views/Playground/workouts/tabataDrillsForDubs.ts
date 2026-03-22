@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 14min
 export const tabataDrillsForDubs: Block[] = [
   {
     equipment: '1/4 LB',

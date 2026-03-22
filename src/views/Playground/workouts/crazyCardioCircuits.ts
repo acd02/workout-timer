@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 25min - 1/2 LB x 1 LB
 export const crazyCardioCircuits: Block[] = [
   {
     equipment: '1/2 LB',

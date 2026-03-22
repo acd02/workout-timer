@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 28min - 1/2 LB x 1/4 LB
 export const livelyLeaps: Block[] = [
   {
     equipment: '1/4 LB',

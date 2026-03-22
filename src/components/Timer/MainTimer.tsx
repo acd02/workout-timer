@@ -54,7 +54,7 @@ export function MainTimer() {
 
   const progress = 1 - api.progressPercent
 
-  const isWorkoutDone = !api.running && snap.activeIndex === steps.length
+  const isWorkoutDone = snap.activeIndex === steps.length && progress === 1
 
   if (isWorkoutDone)
     return <div className="mt-20 h-1/4 animate-bounce text-center text-8xl">🎉</div>

@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 24min - 1/2 LB
 export const hopItLikeItsHot: Block[] = [
   {
     equipment: '1/2 LB',

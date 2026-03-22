@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 23min - 1 LB x 2 LB
 export const fullMoonMadness: Block[] = [
   {
     equipment: '2 LB',

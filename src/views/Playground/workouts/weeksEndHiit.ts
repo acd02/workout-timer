@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 29min - 1/2 LB x 1/4 LB
 export const weeksEndHiit: Block[] = [
   {
     equipment: '1/4 LB',

@@ -1,6 +1,5 @@
 import type { Block } from '@components/Timer/types'
 
-// 14min
 export const marchStrongTabatas: Block[] = [
   {
     equipment: '1 LB',
