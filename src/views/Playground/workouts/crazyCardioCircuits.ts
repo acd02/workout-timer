@@ -4,7 +4,7 @@ export const crazyCardioCircuits: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 0, seconds: 30, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 30, label: 'Alternate Foot - 1/2 LB' },
       { minutes: 0, seconds: 30, label: 'Jump Rope Off Step' },
       { minutes: 0, seconds: 30, label: 'Freestyle Jump' },
       { minutes: 0, seconds: 15, label: 'Rest' },

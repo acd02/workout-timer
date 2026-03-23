@@ -5,7 +5,7 @@ export const cardioCoreCraze: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 1, seconds: 0, label: 'Boxer Step' },
+      { minutes: 1, seconds: 0, label: 'Boxer Step - 1/2 LB' },
       { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
       { minutes: 1, seconds: 0, label: 'Boxer Step' },
       { minutes: 1, seconds: 0, label: 'Freestyle Jump' },

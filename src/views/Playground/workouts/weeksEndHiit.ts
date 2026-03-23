@@ -4,7 +4,7 @@ export const weeksEndHiit: Block[] = [
   {
     equipment: '1/4 LB',
     steps: [
-      { minutes: 1, seconds: 0, label: 'Boxer Step' },
+      { minutes: 1, seconds: 0, label: 'Boxer Step - 1/4 LB' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 1, seconds: 0, label: 'Jumping Jacks' },
       { minutes: 0, seconds: 20, label: 'Rest' },

@@ -4,7 +4,7 @@ export const fullMoonMadness: Block[] = [
   {
     equipment: '2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump - 2 LB' },
       { minutes: 0, seconds: 20, label: 'Boxer Step' },
       { minutes: 0, seconds: 20, label: 'Basic Jump' },
       { minutes: 0, seconds: 20, label: 'Rest' },

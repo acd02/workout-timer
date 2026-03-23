@@ -4,7 +4,7 @@ export const tabataDrillsForDubs: Block[] = [
   {
     equipment: '1/4 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Alternate Foot - 1/4 LB' },
       { minutes: 0, seconds: 10, label: 'Rest' },
       { minutes: 0, seconds: 20, label: 'Double Unders' },
       { minutes: 0, seconds: 10, label: 'Rest' },

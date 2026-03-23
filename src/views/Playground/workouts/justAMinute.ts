@@ -4,7 +4,7 @@ export const justAMinute: Block[] = [
   {
     equipment: '1/4 LB',
     steps: [
-      { minutes: 1, seconds: 0, label: 'Alternate Foot' },
+      { minutes: 1, seconds: 0, label: 'Alternate Foot - 1/4 LB' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 1, seconds: 0, label: 'Curtsy Squats' },
       { minutes: 0, seconds: 20, label: 'Rest' },

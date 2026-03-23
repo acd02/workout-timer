@@ -4,7 +4,7 @@ export const championsCircuit: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 1, seconds: 0, label: 'Jump Rope Off Step' },
+      { minutes: 1, seconds: 0, label: 'Jump Rope Off Step - 1 LB' },
       { minutes: 1, seconds: 0, label: 'Boxer Step' },
       { minutes: 1, seconds: 0, label: 'Freestyle Jump' },
       { minutes: 0, seconds: 30, label: 'Rest' },

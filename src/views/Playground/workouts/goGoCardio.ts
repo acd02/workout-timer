@@ -5,7 +5,7 @@ export const goGoCardio: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Scissor Jump' },
+      { minutes: 0, seconds: 20, label: 'Scissor Jump - 1/2 LB' },
       { minutes: 1, seconds: 0, label: 'Boxer Step' },
       { minutes: 0, seconds: 20, label: 'Scissor Jump' },
       { minutes: 1, seconds: 0, label: 'Boxer Step' },

@@ -4,7 +4,7 @@ export const summerGlowGrinder: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'High Knee Jump' },
+      { minutes: 0, seconds: 20, label: 'High Knee Jump - 1/2 LB' },
       { minutes: 0, seconds: 20, label: 'Alternate Foot' },
       { minutes: 0, seconds: 20, label: 'Jump Rope Off Step' },
       { minutes: 1, seconds: 0, label: 'Swing Kick' },

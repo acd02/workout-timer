@@ -5,7 +5,7 @@ export const intense: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Double Unders' },
+      { minutes: 0, seconds: 20, label: 'Double Unders - 1/2 LB' },
       { minutes: 0, seconds: 20, label: 'Basic Jump' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 0, seconds: 30, label: 'Burpees' },

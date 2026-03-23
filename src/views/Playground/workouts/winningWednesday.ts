@@ -4,7 +4,7 @@ export const winningWednesday: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 0, seconds: 30, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 30, label: 'Alternate Foot - 1 LB' },
       { minutes: 0, seconds: 15, label: 'High Knee Jump' },
       { minutes: 0, seconds: 30, label: 'Alternate Foot' },
       { minutes: 0, seconds: 15, label: 'High Knee Jump' },

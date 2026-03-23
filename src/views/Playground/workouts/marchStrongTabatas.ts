@@ -4,7 +4,7 @@ export const marchStrongTabatas: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'High Knee Off Step' },
+      { minutes: 0, seconds: 20, label: 'High Knee Off Step - 1 LB' },
       { minutes: 0, seconds: 10, label: 'Rest' },
       { minutes: 0, seconds: 20, label: 'Sprint High Knees' },
       { minutes: 0, seconds: 10, label: 'Rest' },

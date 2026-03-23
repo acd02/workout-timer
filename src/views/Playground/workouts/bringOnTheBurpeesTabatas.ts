@@ -4,7 +4,7 @@ export const bringOnTheBurpeesTabatas: Block[] = [
   {
     equipment: '1/2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Boxer Step' },
+      { minutes: 0, seconds: 20, label: 'Boxer Step - 1/2LB' },
       { minutes: 0, seconds: 10, label: 'Rest' },
       { minutes: 0, seconds: 20, label: 'Double Unders' },
       { minutes: 0, seconds: 10, label: 'Rest' },

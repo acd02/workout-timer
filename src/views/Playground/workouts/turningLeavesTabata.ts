@@ -4,7 +4,7 @@ export const turningLeavesTabata: Block[] = [
   {
     equipment: '2 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Alternate Foot - 2 LB' },
       { minutes: 0, seconds: 10, label: 'Rest' },
       { minutes: 0, seconds: 20, label: 'Surrenders' },
       { minutes: 0, seconds: 10, label: 'Rest' },
