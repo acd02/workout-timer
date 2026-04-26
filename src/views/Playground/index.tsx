@@ -5,11 +5,15 @@ import { objectKeys } from '@utils/obect'
 import { useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
+import { physEdClass } from './workouts/physEdClass'
+import { generatePower } from './workouts/generatePower'
 import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
 import { cardioCoreCraze } from './workouts/cardioCoreCraze'
+import { sunshineStrength } from './workouts/sunshineStrength'
 import { championsCircuit } from './workouts/championsCircuit'
 import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
 import { everyMinuteCounts } from './workouts/everyMinuteCounts'
+import { flexFriday } from './workouts/flexFriday'
 import { forTheLoveOfTabatas } from './workouts/forTheLoveOfTabatas'
 import { fullMoonMadness } from './workouts/fullMoonMadness'
 import { goGoCardio } from './workouts/goGoCardio'
@@ -22,6 +26,7 @@ import { justAMinute } from './workouts/justAMinute'
 import { livelyLeaps } from './workouts/livelyLeaps'
 import { marchStrongTabatas } from './workouts/marchStrongTabatas'
 import { muscleUpMonday } from './workouts/muscleUpMonday'
+import { planksgivingParty } from './workouts/planksgivingParty'
 import { pumpUpJumpUpTabatas } from './workouts/pumpUpJumpUpTabatas'
 import { summerGlowGrinder } from './workouts/summerGlowGrinder'
 import { tabataDrillsForDubs } from './workouts/tabataDrillsForDubs'
@@ -67,11 +72,32 @@ const workoutsLookup = {
     set: 'strong',
   },
   ['Winning Wednesday']: { workout: winningWednesday, duration: '20min', set: 'strong' },
+  ['Generate Power']: { workout: generatePower, duration: '22min', set: 'strong' },
   ['Full Moon Madness']: { workout: fullMoonMadness, duration: '23min', set: 'strong' },
   ['Muscle Up Monday']: { workout: muscleUpMonday, duration: '28min', set: 'strong' },
   ['Every Minute Counts']: {
     workout: everyMinuteCounts,
     duration: '29min',
+    set: 'strong',
+  },
+  ['Planksgiving Party']: {
+    workout: planksgivingParty,
+    duration: '29min',
+    set: 'strong',
+  },
+  ['Flex Friday']: {
+    workout: flexFriday,
+    duration: '30min',
+    set: 'strong',
+  },
+  ['Phys Ed Class']: {
+    workout: physEdClass,
+    duration: '33min',
+    set: 'strong',
+  },
+  ['Sunshine Strength']: {
+    workout: sunshineStrength,
+    duration: '49min',
     set: 'strong',
   },
 
