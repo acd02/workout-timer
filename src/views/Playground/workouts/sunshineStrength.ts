@@ -4,7 +4,7 @@ export const sunshineStrength: Block[] = [
   {
     equipment: '2 LB',
     steps: [
-      { minutes: 0, seconds: 40, label: 'Freestyle Jump' },
+      { minutes: 0, seconds: 40, label: 'Freestyle Jump - 2 LB' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 0, seconds: 45, label: 'Donkey Kick' },
       { minutes: 0, seconds: 25, label: 'Rest' },

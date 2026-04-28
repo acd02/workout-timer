@@ -4,7 +4,7 @@ export const generatePower: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Alternate Foot - 1 LB' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 0, seconds: 35, label: 'Side-to-Side Squats' },
       { minutes: 0, seconds: 15, label: 'Rest' },

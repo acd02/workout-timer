@@ -4,7 +4,7 @@ export const physEdClass: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 0, seconds: 20, label: 'Basic Jump' },
+      { minutes: 0, seconds: 20, label: 'Basic Jump - 1 LB' },
       { minutes: 0, seconds: 20, label: 'Twister Jump' },
       { minutes: 0, seconds: 20, label: 'Basic Jump' },
       { minutes: 0, seconds: 20, label: 'Rest' },

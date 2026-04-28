@@ -4,7 +4,7 @@ export const planksgivingParty: Block[] = [
   {
     equipment: '1 LB',
     steps: [
-      { minutes: 0, seconds: 30, label: 'Elbow Planks' },
+      { minutes: 0, seconds: 30, label: 'Elbow Planks - 1 LB' },
       { minutes: 0, seconds: 20, label: 'Rest' },
       { minutes: 0, seconds: 40, label: 'Boxer Step' },
       { minutes: 0, seconds: 20, label: 'Rest' },
