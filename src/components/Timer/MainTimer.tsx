@@ -1,4 +1,5 @@
 import { buttonGroup } from '@styles/button'
+import { useMeasure } from '@uidotdev/usehooks'
 import { mergeProps, normalizeProps, useMachine } from '@zag-js/react'
 import * as timer from '@zag-js/timer'
 import { useEffect, useEffectEvent, useId } from 'react'
@@ -47,6 +48,8 @@ export function MainTimer() {
 
   const restart = useEffectEvent(() => api.restart())
 
+  const [ref, { width, height }] = useMeasure()
+
   useEffect(() => {
     if (!snap.activeIndex) return
     restart() // needed when two consecutive steps share same duration
@@ -61,8 +64,8 @@ export function MainTimer() {
 
   return (
     <div {...api.getRootProps()}>
-      <div className="relative mx-auto max-w-[640px]">
-        <AnimatedProgress progress={progress} />
+      <div ref={ref} className="relative mx-auto aspect-5/1 max-w-[640px]">
+        <AnimatedProgress width={width} height={height} progress={progress} />
 
         <div
           className="flex justify-evenly rounded-md p-4 text-8xl tabular-nums"

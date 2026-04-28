@@ -1,27 +1,37 @@
+import { animate, motion, useMotionValue } from 'motion/react'
+import { useEffect } from 'react'
+
 interface Props {
   progress: number
+  width: number | null
+  height: number | null
 }
 
-// SVG viewBox dimensions
-// width and height values are arbitrary, only the aspect ratio matters
-// (5:1 ratio stretches to fit actual container via preserveAspectRatio="none")
 const SVG_CONFIG = {
-  width: 1000,
-  height: 200,
-  strokeWidth: 12,
+  strokeWidth: 10,
   radius: 12,
 } as const
 
-export function AnimatedProgress({ progress }: Props) {
-  const { width, height, strokeWidth, radius } = SVG_CONFIG
+export function AnimatedProgress({ progress, width, height }: Props) {
+  const { strokeWidth, radius } = SVG_CONFIG
 
-  // Calculate path for rounded rectangle
+  const pathLength = useMotionValue(0)
+
+  useEffect(() => {
+    const controls = animate(pathLength, progress, {
+      duration: progress > 0 ? 1 : 0,
+      ease: 'linear',
+    })
+    return () => controls.stop()
+  }, [progress, pathLength])
+
+  if (width === null || height === null) return
+
   const x = strokeWidth / 2
   const y = strokeWidth / 2
   const w = width - strokeWidth
   const h = height - strokeWidth
 
-  // Rounded rectangle path starting from top center, going clockwise
   const path = `
     M ${width / 2} ${y}
     L ${w - radius + x} ${y}
@@ -37,26 +47,17 @@ export function AnimatedProgress({ progress }: Props) {
 
   return (
     <svg
-      className="pointer-events-none absolute inset-0"
+      className="pointer-events-none absolute inset-0 size-full"
       viewBox={`0 0 ${width} ${height}`}
       preserveAspectRatio="none"
-      style={{ width: '100%', height: '100%' }}
     >
-      {/* Background border */}
       <path d={path} fill="none" stroke="rgb(229 231 235)" strokeWidth={strokeWidth} />
-
-      {/* Animated progress border */}
-      <path
+      <motion.path
         d={path}
         fill="none"
         stroke="rgb(34 197 94)"
         strokeWidth={strokeWidth}
-        strokeDasharray="1"
-        strokeDashoffset={1 - progress}
-        pathLength="1"
-        style={{
-          transition: progress > 0 ? 'stroke-dashoffset 1s linear' : undefined,
-        }}
+        style={{ pathLength }}
       />
     </svg>
   )
