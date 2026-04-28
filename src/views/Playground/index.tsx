@@ -1,7 +1,7 @@
 import { Select } from '@components/Select'
 import { Timer } from '@components/Timer'
 import { buttonGroup } from '@styles/button'
-import { objectKeys } from '@utils/obect'
+import { objectKeys } from '@utils/object'
 import { useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
