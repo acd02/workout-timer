@@ -15,24 +15,24 @@ interface Props {
 export function Timer({ blocks }: Props) {
   const snap = useSnapshot(state)
 
-  const flatSteps = blocks.flatMap(block =>
-    block.steps.map(step => ({ ...step, equipment: block.equipment }))
-  )
-
-  const allSteps = [PREFIXED_STEP, ...flatSteps, SUFFIXED_STEP]
-
   if (!snap.isStoreInitialized) {
+    const flatSteps = blocks.flatMap(block =>
+      block.steps.map(step => ({ ...step, equipment: block.equipment }))
+    )
+
+    const allSteps = [PREFIXED_STEP, ...flatSteps, SUFFIXED_STEP]
     actions.initializeStore({ allSteps, blocks })
   }
 
-  useEffect(() => {
+  useEffect(function toggleWakeLock() {
     let wakeLock: WakeLockSentinel | null = null
 
     const startWakeLock = async () => {
       try {
         wakeLock = await navigator.wakeLock.request('screen')
-      } catch (err) {
-        console.error(`${(err as Error).name}, ${(err as Error).message}`)
+      } catch (_err) {
+        const err = _err as Error
+        console.error(`${err.name}, ${err.message}`)
       }
     }
 

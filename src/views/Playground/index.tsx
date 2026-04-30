@@ -5,17 +5,15 @@ import { objectKeys } from '@utils/object'
 import { useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
-import { physEdClass } from './workouts/physEdClass'
-import { generatePower } from './workouts/generatePower'
 import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
 import { cardioCoreCraze } from './workouts/cardioCoreCraze'
-import { sunshineStrength } from './workouts/sunshineStrength'
 import { championsCircuit } from './workouts/championsCircuit'
 import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
 import { everyMinuteCounts } from './workouts/everyMinuteCounts'
 import { flexFriday } from './workouts/flexFriday'
 import { forTheLoveOfTabatas } from './workouts/forTheLoveOfTabatas'
 import { fullMoonMadness } from './workouts/fullMoonMadness'
+import { generatePower } from './workouts/generatePower'
 import { goGoCardio } from './workouts/goGoCardio'
 import { heavyRopesAndCoreStrength } from './workouts/heavyRopesAndCoreStrength'
 import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
@@ -26,9 +24,11 @@ import { justAMinute } from './workouts/justAMinute'
 import { livelyLeaps } from './workouts/livelyLeaps'
 import { marchStrongTabatas } from './workouts/marchStrongTabatas'
 import { muscleUpMonday } from './workouts/muscleUpMonday'
+import { physEdClass } from './workouts/physEdClass'
 import { planksgivingParty } from './workouts/planksgivingParty'
 import { pumpUpJumpUpTabatas } from './workouts/pumpUpJumpUpTabatas'
 import { summerGlowGrinder } from './workouts/summerGlowGrinder'
+import { sunshineStrength } from './workouts/sunshineStrength'
 import { tabataDrillsForDubs } from './workouts/tabataDrillsForDubs'
 import { turningLeavesTabata } from './workouts/turningLeavesTabata'
 import { weeksEndHiit } from './workouts/weeksEndHiit'
@@ -139,10 +139,12 @@ const workoutsLookup = {
 
 type WorkoutKey = keyof typeof workoutsLookup
 
-const selectData = objectKeys(workoutsLookup).map(workoutLabel => ({
-  label: `${workoutLabel} - ${workoutsLookup[workoutLabel].duration} - ${workoutsLookup[workoutLabel].set}`,
-  value: workoutLabel,
-}))
+const selectData: { label: string; value: WorkoutKey }[] = objectKeys(workoutsLookup).map(
+  workoutLabel => ({
+    label: `${workoutLabel} - ${workoutsLookup[workoutLabel].duration} - ${workoutsLookup[workoutLabel].set}`,
+    value: workoutLabel,
+  })
+)
 
 function Playground() {
   const [selectedWorkout, setSelectedWorkout] = useState<WorkoutKey>()
@@ -159,9 +161,7 @@ function Playground() {
           <div className="grid min-h-dvh place-items-center">
             <div className="flex flex-col gap-y-4">
               <Select
-                onValueChange={value => {
-                  setSelectedWorkout(value as WorkoutKey)
-                }}
+                onValueChange={setSelectedWorkout}
                 data={selectData}
                 label="Select a workout:"
               />

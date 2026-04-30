@@ -24,7 +24,7 @@ export function RemainingTimer() {
   const pause = useEffectEvent(() => api.pause())
   const resume = useEffectEvent(() => api.resume())
 
-  useEffect(() => {
+  useEffect(function shouldStartRemainingTimer() {
     const unsubscribe = subscribeKey(state, 'shouldStartRemainingTimer', shouldStart => {
       if (shouldStart) start()
     })
@@ -32,7 +32,7 @@ export function RemainingTimer() {
     return unsubscribe
   }, [])
 
-  useEffect(() => {
+  useEffect(function pauseOrResumeTimer() {
     const unsubscribe = subscribeKey(state, 'mainTimerStatus', status => {
       if (status === 'running') resume()
       else pause()

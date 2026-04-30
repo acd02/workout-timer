@@ -5,13 +5,17 @@ import { useId } from 'react'
 
 import { cxLabel, cxList, cxListItem, cxTrigger } from './styles'
 
-interface Props {
+interface Props<T extends string> {
   label: string
-  data: { label: string; value: string }[]
-  onValueChange: (value: string) => void
+  data: { label: string; value: T }[]
+  onValueChange: (value: T) => void
 }
 
-export function Select({ label, data, onValueChange: onValueChangeProp }: Props) {
+export function Select<T extends string>({
+  label,
+  data,
+  onValueChange: onValueChangeProp,
+}: Props<T>) {
   const service = useMachine(select.machine, {
     loopFocus: true,
     name: 'workout',
@@ -19,7 +23,7 @@ export function Select({ label, data, onValueChange: onValueChangeProp }: Props)
     collection: select.collection({ items: data }),
     onValueChange(details) {
       const value = details.value.at(0)
-      if (value) onValueChangeProp(value)
+      if (value) onValueChangeProp(value as T)
     },
   })
 
