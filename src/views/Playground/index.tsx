@@ -2,7 +2,7 @@ import { Select } from '@components/Select'
 import { Timer } from '@components/Timer'
 import { buttonGroup } from '@styles/button'
 import { objectKeys } from '@utils/object'
-import { useState } from 'react'
+import { SubmitEvent, useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
 import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
@@ -150,7 +150,8 @@ function Playground() {
   const [selectedWorkout, setSelectedWorkout] = useState<WorkoutKey>()
   const [step, setStep] = useState<'selection' | 'workout'>('selection')
 
-  function validateStepChange() {
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
+    event.preventDefault()
     setStep('workout')
   }
 
@@ -159,21 +160,23 @@ function Playground() {
       case step === 'selection':
         return (
           <div className="grid min-h-dvh place-items-center">
-            <div className="flex flex-col gap-y-4">
-              <Select
-                onValueChange={setSelectedWorkout}
-                data={selectData}
-                label="Select a workout:"
-              />
-              <button
-                disabled={!selectedWorkout}
-                className={buttonGroup({ part: 'middle' })}
-                type="button"
-                onClick={validateStepChange}
-              >
-                let's go
-              </button>
-            </div>
+            <form onSubmit={handleSubmit}>
+              <div className="flex flex-col gap-y-4">
+                <Select
+                  name="workout"
+                  label="Select a workout:"
+                  onValueChange={setSelectedWorkout}
+                  data={selectData}
+                />
+                <button
+                  disabled={!selectedWorkout}
+                  className={buttonGroup({ part: 'middle' })}
+                  type="submit"
+                >
+                  let's go
+                </button>
+              </div>
+            </form>
           </div>
         )
 

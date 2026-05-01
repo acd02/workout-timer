@@ -6,19 +6,21 @@ import { useId } from 'react'
 import { cxLabel, cxList, cxListItem, cxTrigger } from './styles'
 
 interface Props<T extends string> {
+  name: string
   label: string
   data: { label: string; value: T }[]
   onValueChange: (value: T) => void
 }
 
 export function Select<T extends string>({
+  name,
   label,
   data,
   onValueChange: onValueChangeProp,
 }: Props<T>) {
   const service = useMachine(select.machine, {
     loopFocus: true,
-    name: 'workout',
+    name,
     id: useId(),
     collection: select.collection({ items: data }),
     onValueChange(details) {
@@ -32,7 +34,7 @@ export function Select<T extends string>({
   const controlProps = mergeProps(api.getControlProps())
 
   return (
-    <form>
+    <>
       {/* Hidden select */}
       <select {...api.getHiddenSelectProps()}>
         {data.map(({ label, value }) => (
@@ -71,6 +73,6 @@ export function Select<T extends string>({
           </ul>
         </div>
       </Portal>
-    </form>
+    </>
   )
 }
