@@ -1,0 +1,67 @@
+import type { Block } from '@components/Timer/types'
+
+export const sweatingInTheSun: Block[] = [
+  {
+    equipment: '1/2 LB',
+    steps: [
+      { minutes: 0, seconds: 40, label: 'Alternate Foot - 1/2 LB' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Scissor Jump' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Scissor Jump' },
+    ],
+  },
+  {
+    equipment: '1/4 LB',
+    steps: [
+      { minutes: 0, seconds: 50, label: 'Change Ropes ➡️ 1/4 LB' },
+      { minutes: 0, seconds: 20, label: 'High Knee Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Burpees' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Buttkickers' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Tuck Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'High Knee Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Tuck Jump Burpees' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Buttkickers' },
+    ],
+  },
+  {
+    equipment: '1/2 LB',
+    steps: [
+      { minutes: 0, seconds: 50, label: 'Change Ropes ➡️ 1/2 LB' },
+      { minutes: 0, seconds: 40, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Jump Rope Jacks' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Alternate Foot' },
+      { minutes: 0, seconds: 20, label: 'Rest' },
+      { minutes: 0, seconds: 40, label: 'Jump Rope Jacks' },
+    ],
+  },
+  {
+    equipment: '1/4 LB',
+    steps: [
+      { minutes: 0, seconds: 50, label: 'Change Ropes ➡️ 1/4 LB' },
+      { minutes: 0, seconds: 20, label: 'High Knee Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Burpees' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Mummy Kick Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Tuck Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'High Knee Jump' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Tuck Jump Burpees' },
+      { minutes: 0, seconds: 10, label: 'Rest' },
+      { minutes: 0, seconds: 20, label: 'Mummy Kick Jump' },
+    ],
+  },
+]

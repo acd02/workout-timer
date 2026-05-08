@@ -6,17 +6,20 @@ import { SubmitEvent, useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
 import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
-import { cardioCoreCraze } from './workouts/cardioCoreCraze'
-import { championsCircuit } from './workouts/championsCircuit'
-import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
+// import { cardioCoreCraze } from './workouts/cardioCoreCraze'
+// import { championsCircuit } from './workouts/championsCircuit'
+// import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
 import { everyMinuteCounts } from './workouts/everyMinuteCounts'
 import { flexFriday } from './workouts/flexFriday'
 import { forTheLoveOfTabatas } from './workouts/forTheLoveOfTabatas'
+import { fridayFightNight } from './workouts/fridayFightNight'
 import { fullMoonMadness } from './workouts/fullMoonMadness'
 import { generatePower } from './workouts/generatePower'
 import { goGoCardio } from './workouts/goGoCardio'
+import { harvestHustle } from './workouts/harvestHustle'
 import { heavyRopesAndCoreStrength } from './workouts/heavyRopesAndCoreStrength'
 import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
+import { hoppingForHeartHealth } from './workouts/hoppingForHeartHealth'
 import { intense } from './workouts/intense'
 import { jingleJumpLegBlitz } from './workouts/jingleJumpLegBlitz'
 import { jumpAndPlankTabatas } from './workouts/jumpAndPlankTabatas'
@@ -27,14 +30,76 @@ import { muscleUpMonday } from './workouts/muscleUpMonday'
 import { physEdClass } from './workouts/physEdClass'
 import { planksgivingParty } from './workouts/planksgivingParty'
 import { pumpUpJumpUpTabatas } from './workouts/pumpUpJumpUpTabatas'
-import { summerGlowGrinder } from './workouts/summerGlowGrinder'
+import { smokingHotHiit } from './workouts/smokingHotHiit'
+// import { summerGlowGrinder } from './workouts/summerGlowGrinder'
 import { sunshineStrength } from './workouts/sunshineStrength'
+import { sweatingInTheSun } from './workouts/sweatingInTheSun'
 import { tabataDrillsForDubs } from './workouts/tabataDrillsForDubs'
+import { turnUpTheHeat } from './workouts/turnUpTheHeat'
 import { turningLeavesTabata } from './workouts/turningLeavesTabata'
 import { weeksEndHiit } from './workouts/weeksEndHiit'
 import { winningWednesday } from './workouts/winningWednesday'
+import { lilacAndLeaps } from './workouts/lilacAndLeaps'
 
 const workoutsLookup = {
+  ['Smoking Hot Hiit']: {
+    workout: smokingHotHiit,
+    duration: '12min',
+    set: 'lean',
+  },
+  ['Bring On The Burpees Tabatas']: {
+    workout: bringOnTheBurpeesTabatas,
+    duration: '14min',
+    set: 'lean',
+  },
+  ['For The Love Of Tabatas']: {
+    workout: forTheLoveOfTabatas,
+    duration: '14min',
+    set: 'lean',
+  },
+  ['Tabata Drills For Dubs']: {
+    workout: tabataDrillsForDubs,
+    duration: '14min',
+    set: 'lean',
+  },
+  ['Sweating In The Sun']: {
+    workout: sweatingInTheSun,
+    duration: '17min',
+    set: 'lean',
+  },
+  ['Go Go Cardio']: { workout: goGoCardio, duration: '20min', set: 'lean' },
+  ["Hop It Like It's Hot"]: { workout: hopItLikeItsHot, duration: '24min', set: 'lean' },
+  ['Intense']: { workout: intense, duration: '27min', set: 'lean' },
+  ['Just A Minute']: { workout: justAMinute, duration: '28min', set: 'lean' },
+  ['Lively Leaps']: { workout: livelyLeaps, duration: '28min', set: 'lean' },
+  ["Week's End Hiit"]: { workout: weeksEndHiit, duration: '29min', set: 'lean' },
+  ['Hopping For Heart Health']: {
+    workout: hoppingForHeartHealth,
+    duration: '32min',
+    set: 'lean',
+  },
+  ['Friday Fight Night']: {
+    workout: fridayFightNight,
+    duration: '33min',
+    set: 'lean',
+  },
+  ['Lilac & Leaps']: {
+    workout: lilacAndLeaps,
+    duration: '33min',
+    set: 'lean',
+  },
+  ['Harvest Hustle']: {
+    workout: harvestHustle,
+    duration: '35min',
+    set: 'lean',
+  },
+
+  ['Turn Up The Heat']: {
+    workout: turnUpTheHeat,
+    duration: '38min',
+    set: 'lean',
+  },
+
   // strong
   ['All About B Tabatas']: {
     workout: allAboutBTabatas,
@@ -101,40 +166,19 @@ const workoutsLookup = {
     set: 'strong',
   },
 
-  ['Bring On The Burpees Tabatas']: {
-    workout: bringOnTheBurpeesTabatas,
-    duration: '14min',
-    set: 'lean',
-  },
-  ['For The Love Of Tabatas']: {
-    workout: forTheLoveOfTabatas,
-    duration: '14min',
-    set: 'lean',
-  },
-  ['Tabata Drills For Dubs']: {
-    workout: tabataDrillsForDubs,
-    duration: '14min',
-    set: 'lean',
-  },
-  ['Go Go Cardio']: { workout: goGoCardio, duration: '20min', set: 'lean' },
-  ["Hop It Like It's Hot"]: { workout: hopItLikeItsHot, duration: '24min', set: 'lean' },
-  ['Intense']: { workout: intense, duration: '27min', set: 'lean' },
-  ['Just A Minute']: { workout: justAMinute, duration: '28min', set: 'lean' },
-  ['Lively Leaps']: { workout: livelyLeaps, duration: '28min', set: 'lean' },
-  ["Week's End Hiit"]: { workout: weeksEndHiit, duration: '29min', set: 'lean' },
-
-  ['Crazy Cardio Circuits']: {
-    workout: crazyCardioCircuits,
-    duration: '25min',
-    set: 'mixed',
-  },
-  ['Champions Circuit']: { workout: championsCircuit, duration: '26min', set: 'mixed' },
-  ['Cardio Core Craze']: { workout: cardioCoreCraze, duration: '27min', set: 'mixed' },
-  ['Summer Glow Grinder']: {
-    workout: summerGlowGrinder,
-    duration: '28min',
-    set: 'mixed',
-  },
+  // mixed
+  // ['Crazy Cardio Circuits']: {
+  //   workout: crazyCardioCircuits,
+  //   duration: '25min',
+  //   set: 'mixed',
+  // },
+  // ['Champions Circuit']: { workout: championsCircuit, duration: '26min', set: 'mixed' },
+  // ['Cardio Core Craze']: { workout: cardioCoreCraze, duration: '27min', set: 'mixed' },
+  // ['Summer Glow Grinder']: {
+  //   workout: summerGlowGrinder,
+  //   duration: '28min',
+  //   set: 'mixed',
+  // },
 }
 
 type WorkoutKey = keyof typeof workoutsLookup
