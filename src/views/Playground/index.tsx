@@ -10,6 +10,7 @@ import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
 // import { championsCircuit } from './workouts/championsCircuit'
 // import { crazyCardioCircuits } from './workouts/crazyCardioCircuits'
 import { everyMinuteCounts } from './workouts/everyMinuteCounts'
+import { feelTheBurn } from './workouts/feelTheBurn'
 import { flexFriday } from './workouts/flexFriday'
 import { forTheLoveOfTabatas } from './workouts/forTheLoveOfTabatas'
 import { fridayFightNight } from './workouts/fridayFightNight'
@@ -24,6 +25,7 @@ import { intense } from './workouts/intense'
 import { jingleJumpLegBlitz } from './workouts/jingleJumpLegBlitz'
 import { jumpAndPlankTabatas } from './workouts/jumpAndPlankTabatas'
 import { justAMinute } from './workouts/justAMinute'
+import { lilacAndLeaps } from './workouts/lilacAndLeaps'
 import { livelyLeaps } from './workouts/livelyLeaps'
 import { marchStrongTabatas } from './workouts/marchStrongTabatas'
 import { muscleUpMonday } from './workouts/muscleUpMonday'
@@ -39,7 +41,6 @@ import { turnUpTheHeat } from './workouts/turnUpTheHeat'
 import { turningLeavesTabata } from './workouts/turningLeavesTabata'
 import { weeksEndHiit } from './workouts/weeksEndHiit'
 import { winningWednesday } from './workouts/winningWednesday'
-import { lilacAndLeaps } from './workouts/lilacAndLeaps'
 
 const workoutsLookup = {
   ['Smoking Hot Hiit']: {
@@ -73,11 +74,17 @@ const workoutsLookup = {
   ['Just A Minute']: { workout: justAMinute, duration: '28min', set: 'lean' },
   ['Lively Leaps']: { workout: livelyLeaps, duration: '28min', set: 'lean' },
   ["Week's End Hiit"]: { workout: weeksEndHiit, duration: '29min', set: 'lean' },
+  ['Feel the Burn']: {
+    workout: feelTheBurn,
+    duration: '31min',
+    set: 'lean',
+  },
   ['Hopping For Heart Health']: {
     workout: hoppingForHeartHealth,
     duration: '32min',
     set: 'lean',
   },
+
   ['Friday Fight Night']: {
     workout: fridayFightNight,
     duration: '33min',
