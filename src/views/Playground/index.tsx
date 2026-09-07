@@ -18,6 +18,7 @@ import { fullMoonMadness } from './workouts/fullMoonMadness'
 import { generatePower } from './workouts/generatePower'
 import { goGoCardio } from './workouts/goGoCardio'
 import { harvestHustle } from './workouts/harvestHustle'
+import { heavyRopeFlex } from './workouts/heavyRopeFlex'
 import { heavyRopesAndCoreStrength } from './workouts/heavyRopesAndCoreStrength'
 import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
 import { hoppingForHeartHealth } from './workouts/hoppingForHeartHealth'
@@ -28,6 +29,7 @@ import { justAMinute } from './workouts/justAMinute'
 import { lilacAndLeaps } from './workouts/lilacAndLeaps'
 import { livelyLeaps } from './workouts/livelyLeaps'
 import { marchStrongTabatas } from './workouts/marchStrongTabatas'
+import { mayTheFourth } from './workouts/mayTheFourth'
 import { muscleUpMonday } from './workouts/muscleUpMonday'
 import { physEdClass } from './workouts/physEdClass'
 import { planksgivingParty } from './workouts/planksgivingParty'
@@ -146,6 +148,7 @@ const workoutsLookup = {
   ['Winning Wednesday']: { workout: winningWednesday, duration: '20min', set: 'strong' },
   ['Generate Power']: { workout: generatePower, duration: '22min', set: 'strong' },
   ['Full Moon Madness']: { workout: fullMoonMadness, duration: '23min', set: 'strong' },
+  ['Heavy Rope Flex']: { workout: heavyRopeFlex, duration: '24min', set: 'strong - KB' },
   ['Muscle Up Monday']: { workout: muscleUpMonday, duration: '28min', set: 'strong' },
   ['Every Minute Counts']: {
     workout: everyMinuteCounts,
@@ -161,6 +164,11 @@ const workoutsLookup = {
     workout: flexFriday,
     duration: '30min',
     set: 'strong',
+  },
+  ['May The Fourth']: {
+    workout: mayTheFourth,
+    duration: '31min',
+    set: 'strong - KB',
   },
   ['Phys Ed Class']: {
     workout: physEdClass,
