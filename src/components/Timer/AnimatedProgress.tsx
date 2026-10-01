@@ -1,5 +1,5 @@
-import { animate, motion, useMotionValue } from 'motion/react'
-import { useEffect } from 'react'
+import { animate } from 'motion/mini'
+import { useEffect, useRef } from 'react'
 
 interface Props {
   progress: number
@@ -14,16 +14,18 @@ const SVG_CONFIG = {
 
 export function AnimatedProgress({ progress, width, height }: Props) {
   const { strokeWidth, radius } = SVG_CONFIG
-
-  const pathLength = useMotionValue(0)
+  const pathRef = useRef<SVGPathElement>(null)
 
   useEffect(() => {
-    const controls = animate(pathLength, progress, {
-      duration: progress > 0 ? 1 : 0,
-      ease: 'linear',
-    })
+    if (!pathRef.current) return
+
+    const controls = animate(
+      pathRef.current,
+      { strokeDashoffset: 1 - progress },
+      { duration: progress > 0 ? 1 : 0, ease: 'linear' },
+    )
     return () => controls.stop()
-  }, [progress, pathLength])
+  }, [progress])
 
   if (width === null || height === null) return
 
@@ -52,12 +54,15 @@ export function AnimatedProgress({ progress, width, height }: Props) {
       preserveAspectRatio="none"
     >
       <path d={path} fill="none" stroke="rgb(229 231 235)" strokeWidth={strokeWidth} />
-      <motion.path
+      <path
+        ref={pathRef}
         d={path}
         fill="none"
         stroke="rgb(34 197 94)"
         strokeWidth={strokeWidth}
-        style={{ pathLength }}
+        pathLength={1}
+        strokeDasharray={1}
+        strokeDashoffset={1}
       />
     </svg>
   )
