@@ -23,6 +23,7 @@ import { heavyRopesAndCoreStrength } from './workouts/heavyRopesAndCoreStrength'
 import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
 import { hoppingForHeartHealth } from './workouts/hoppingForHeartHealth'
 import { intense } from './workouts/intense'
+import { ironCardio } from './workouts/ironCardio'
 import { jingleJumpLegBlitz } from './workouts/jingleJumpLegBlitz'
 import { jumpAndPlankTabatas } from './workouts/jumpAndPlankTabatas'
 import { justAMinute } from './workouts/justAMinute'
@@ -45,6 +46,11 @@ import { weeksEndHiit } from './workouts/weeksEndHiit'
 import { winningWednesday } from './workouts/winningWednesday'
 
 const workoutsLookup = {
+  ['Iron Cardio']: {
+    workout: ironCardio,
+    duration: '20min',
+    set: 'KB',
+  },
   ['Smoking Hot Hiit']: {
     workout: smokingHotHiit,
     duration: '12min',
