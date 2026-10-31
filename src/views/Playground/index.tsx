@@ -23,7 +23,8 @@ import { heavyRopesAndCoreStrength } from './workouts/heavyRopesAndCoreStrength'
 import { hopItLikeItsHot } from './workouts/hopItLikeItsHot'
 import { hoppingForHeartHealth } from './workouts/hoppingForHeartHealth'
 import { intense } from './workouts/intense'
-import { ironCardio } from './workouts/ironCardio'
+import { ironCardioTwenty } from './workouts/ironCardioTwenty'
+import { ironCardioTwentyFive } from './workouts/IronCardioTwentyFive'
 import { jingleJumpLegBlitz } from './workouts/jingleJumpLegBlitz'
 import { jumpAndPlankTabatas } from './workouts/jumpAndPlankTabatas'
 import { justAMinute } from './workouts/justAMinute'
@@ -40,15 +41,26 @@ import { smokingHotHiit } from './workouts/smokingHotHiit'
 import { sunshineStrength } from './workouts/sunshineStrength'
 import { sweatingInTheSun } from './workouts/sweatingInTheSun'
 import { tabataDrillsForDubs } from './workouts/tabataDrillsForDubs'
+import { tgu } from './workouts/tgu'
 import { turnUpTheHeat } from './workouts/turnUpTheHeat'
 import { turningLeavesTabata } from './workouts/turningLeavesTabata'
 import { weeksEndHiit } from './workouts/weeksEndHiit'
 import { winningWednesday } from './workouts/winningWednesday'
 
 const workoutsLookup = {
-  ['Iron Cardio']: {
-    workout: ironCardio,
+  ['Iron Cardio 20']: {
+    workout: ironCardioTwenty,
     duration: '20min',
+    set: 'KB',
+  },
+  ['Iron Cardio 25']: {
+    workout: ironCardioTwentyFive,
+    duration: '25min',
+    set: 'KB',
+  },
+  ['TGU']: {
+    workout: tgu,
+    duration: '10min',
     set: 'KB',
   },
   ['Smoking Hot Hiit']: {
