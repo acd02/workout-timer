@@ -5,6 +5,7 @@ import { objectKeys } from '@utils/object'
 import { SubmitEvent, useState } from 'react'
 
 import { allAboutBTabatas } from './workouts/allAboutBTabatas'
+import {emomB } from './workouts/emomB'
 import { bringOnTheBurpeesTabatas } from './workouts/bringOnTheBurpeesTabatas'
 // import { cardioCoreCraze } from './workouts/cardioCoreCraze'
 // import { championsCircuit } from './workouts/championsCircuit'
@@ -57,6 +58,11 @@ const workoutsLookup = {
     workout: ironCardioTwentyFive,
     duration: '25min',
     set: 'KB',
+  },
+  ['EMOM B']: {
+    workout: emomB,
+    duration: '12min',
+    set: 'Resistance bands',
   },
   ['TGU']: {
     workout: tgu,
